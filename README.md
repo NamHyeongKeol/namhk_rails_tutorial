@@ -1,0 +1,1 @@
+# namhk_rails_tutorial
