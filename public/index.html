@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NamhkRailsTutorial1</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <script>
+      // check 1-1
+      var x = document.getElementById("number").innerHTML;
+      console.log("number printed by script in head tag : " + x);
+    </script>
+  </head>
+
+  <body>
+    <h1>NamHK Rails Tutorial 1</h1>
+    <h3>휑한 첫 튜토리얼 페이지</h3>
+    <p id="number">1</p><p id="incrButton">Button</p>
+    <div class="AAA" id="AAA">AAA</div>
+    <div class="BBB" id="BBB">BBB</div>
+    <div class="CCC" id="CCC">CCC</div>
+  </body>
+  <script>
+    // check 1-2
+    var y = document.getElementById("number").innerHTML;
+    console.log("number printed by script below body tag : " + y);
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // check 2
+      var but = document.getElementById("incrButton");
+      but.addEventListener("click", function() {
+        var num = document.getElementById("number").innerHTML;
+        num = 2;
+        document.getElementById("number").innerHTML = num;
+
+        // check 1-3
+        var z = document.getElementById("number").innerHTML;
+        console.log("number printed by script below body tag : " + z);
+      });
+  
+      // check 3
+      var a = document.getElementsByClassName("AAA")[0];
+      a.addEventListener("click", function() {
+        a.className = "BBB";
+      });
+    });
+  </script>
+</html>
+
+<script>
+  // check 4
+  console.log("end of the HTML");
+</script>
